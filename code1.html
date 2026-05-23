@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Essence - Digital Menu</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#23501e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#3b0520",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed": "#3e0500",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary-container": "#732010",
+                    "secondary-fixed-dim": "#ffb4a5",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "secondary": "#9f402d",
+                    "primary": "#154212",
+                    "surface-container-highest": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#2d5a27",
+                    "on-secondary-fixed-variant": "#802918",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#bcf0ae",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed-dim": "#a1d494",
+                    "tertiary-container": "#7c3a55",
+                    "on-surface": "#1c1b1b",
+                    "surface": "#fcf9f8",
+                    "on-primary-container": "#9dd090",
+                    "surface-container-high": "#eae7e7",
+                    "outline": "#72796e",
+                    "inverse-primary": "#a1d494",
+                    "tertiary-fixed": "#ffd9e4",
+                    "on-tertiary-container": "#ffaac8",
+                    "surface-tint": "#3b6934",
+                    "outline-variant": "#c2c9bb",
+                    "on-surface-variant": "#42493e",
+                    "secondary-fixed": "#ffdad3",
+                    "on-background": "#1c1b1b",
+                    "tertiary": "#60233e",
+                    "on-primary-fixed": "#002201",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#fd876f",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb0cc",
+                    "on-tertiary-fixed-variant": "#71314c",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "background": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "24px",
+                    "base": "8px",
+                    "card-padding": "20px",
+                    "section-gap": "48px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "label-md": ["DM Sans"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"],
+                    "price-lg": ["DM Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "price-lg": ["20px", {"lineHeight": "24px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(21, 66, 18, 0.8) 0%, rgba(21, 66, 18, 0) 60%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-container-margin h-16 w-full max-w-[1200px] mx-auto">
+<button class="text-primary dark:text-primary-fixed active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">L'Essence</h1>
+<button class="text-primary dark:text-primary-fixed active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-[1200px] mx-auto">
+<!-- Category Tabs -->
+<nav class="flex items-center overflow-x-auto hide-scrollbar px-container-margin gap-base mb-section-gap sticky top-16 bg-background/95 backdrop-blur-sm z-40 py-4">
+<!-- Active State using mapping from JSON -->
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-all duration-300">
+                Starters
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all duration-300">
+                Mains
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all duration-300">
+                Desserts
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all duration-300">
+                Drinks
+            </button>
+</nav>
+<!-- Featured Dish Hero -->
+<section class="px-container-margin mb-section-gap">
+<div class="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photograph of exquisitely seared scallops placed on a bed of vibrant green pea puree. The plate is garnished with micro-greens and a drizzle of golden herb oil, reflecting soft ambient lighting. The background is a clean, minimalist restaurant setting with warm cream tones. The composition is elegant and high-contrast, emphasizing the texture of the scallops and the rich Forest Green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnVgYU597OUgXIqzjmSZq2zNcxv3Y28kOYWvanFNvs6QjGHl4yL__vru2WEJManfLTnuYQ8D5cz22p4v22qF2WQbltQltWwHxYictb4HT7BgdLID_4atV6PcnViwkZCCnOcOU7WOTU3HUyqu7N5tX2j21ToW_NOhQ31O0cgHTd7Nni2R7P5vFVz_3mc8MXtXJsFz0jNrgjHT5gjj2rszvtSb9CT0RglgMBm1Wf5dG9SJLMi7nEkI1ri9HnfcjGkkyemjcCMHPqjLo"/>
+<div class="absolute inset-0 hero-gradient flex flex-col justify-end p-8 text-white">
+<span class="uppercase tracking-widest font-label-md text-label-md opacity-90 mb-2">Signature Selection</span>
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-display-lg text-display-lg leading-none mb-2">Seared Scallops</h2>
+<p class="font-body-lg text-body-lg max-w-md opacity-80">Hand-dived Atlantic scallops, pea purée, crispy pancetta, and citrus emulsion.</p>
+</div>
+<div class="font-price-lg text-price-lg mb-2">$34.00</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Items -->
+<section class="px-container-margin">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-md text-headline-md text-primary">Starters</h3>
+<div class="h-[1px] flex-grow mx-8 bg-outline-variant"></div>
+</div>
+<!-- Dish Grid/List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap">
+<!-- Card 1 -->
+<div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A top-down view of a creamy Truffle Mushroom Risotto served in a shallow white ceramic bowl. The dish is topped with shaved black truffles, a sprig of fresh thyme, and a dusting of aged Parmesan. The lighting is bright and high-key, highlighting the creamy texture and earthy tones of the mushrooms. The overall aesthetic is minimalist and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3aepuWRswa4FtoqOUsGNFmWDPko0RZlANlGJ8zsLwA3B4S6GZ6qdY9HzxWm32MXknLZgC8g-pzBCQZciroszOqLwpKbs1uYiX94b49MB9UX6UjBB67vYMYFRmGpJRQ76smo8VnLv4aJJXctrbn7DdaOyFsZhYjSIL9d8p69i0fG2ct2pzHtSG3ooO9xe29b-wGAa5hIMkA-4wFtOoJ-DqRCNmHzXHQ8GUAYxAy4iB6uaNsh6bm-HW3RvketIUtlhdIMxPm8TZZuw"/>
+</div>
+<div class="flex flex-col justify-between flex-grow py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Truffle Mushroom Risotto</h4>
+<span class="font-price-lg text-price-lg text-secondary">$28.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Arborio rice slowly cooked with wild forest mushrooms, finished with premium black truffle oil and 24-month aged Reggiano.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A vibrant salad bowl featuring artisanal greens, heirloom tomatoes, and buffalo mozzarella. The dish is beautifully composed with a drizzle of dark balsamic glaze and fresh basil leaves. The lighting is natural and diffuse, creating a fresh and appetizing atmosphere. The color palette emphasizes rich greens and deep reds against a minimalist white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf8jCSJQrHqC0q9YTjVAiQmpehmoiwyr5OjFF1qX4YMbmLvlTlnA1abiWK6JR4H3KYoz6tvfvLZ_o411twnKVRver-yHjVHwyNVyz6dPrpPBT2CX9lWekcsHGvvF30IbGWWEv_7r5ptJx6aMZSgK6he7SCCcEE9-2ZGbFl5vWzxj17yDSyyhkYgqFvgLJ4rWo9OWcLnNYVrcs3T7m9s3r7rkveYOCA8D5xTUJgvPk6eszk1iOPLsf7gWGPdQy62YXkCOQCgBtCHOc"/>
+</div>
+<div class="flex flex-col justify-between flex-grow py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Heirloom Caprese</h4>
+<span class="font-price-lg text-price-lg text-secondary">$22.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Vine-ripened heirloom tomatoes, buffalo mozzarella, fresh basil pesto, and aged balsamic reduction.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A delicate beef carpaccio plate, featuring ultra-thin slices of premium beef topped with wild arugula, capers, and shaved parmesan cheese. A light drizzle of lemon olive oil adds a glistening sheen. The presentation is sophisticated and clean, captured in a bright studio lighting that highlights the deep red of the beef and the fresh greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOqtoUWbkZTOTkcehuG21tKYS797KHGPHODY9MP-A_EnioT_HsOOZBHnYZL_Fls8_e-hnakqWurSnXOcDmtUZZNblBkyXoCCze41C2LxvS4J5ajPitIrIGKQpCS7OMPyM9BcTpINDKhv_EDjHfD4lVd9DAJBYUh_pu3xys3BRyvgvGTpb2gywZq57stPoLVhPviCsjurJy89zxGJbRfwWQisHhnzsy6Eyz6nwuIGtvIo9IUezGVVNocX8zZGBp5egy5dvAR3zdlSs"/>
+</div>
+<div class="flex flex-col justify-between flex-grow py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Beef Carpaccio</h4>
+<span class="font-price-lg text-price-lg text-secondary">$26.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Thinly sliced Wagyu beef, wild arugula, capers, lemon-infused olive oil, and parmesan shavings.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col md:flex-row gap-6 p-4 rounded-xl hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-surface-variant">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A bowl of silky roasted butternut squash soup, garnished with a swirl of coconut cream, toasted pumpkin seeds, and a touch of nutmeg. The bowl sits on a rustic stone surface in a minimalist dining room. The lighting is warm and golden, creating a cozy and luxurious mood. The color palette focuses on rich oranges and creamy whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACZPaZOzOU8Zz-lFYTUO3opNCkNcmEXjXqoH2NbGQZglpMxhzYrJhSXqB6MLhuzCW6fddGrvnA3pAnxL8UozkPdw2qB5dhEFVZGLcKCXyiTo6MuQe1SSfXdFK0cmwwPsvQ4scdl_AY-tP4w0Gw-w_X51lRYtcRL7ppRRPDtxGWI86_w3dKMyA209dvYjbjkU6KRXgsVI78EMLaaeaf36BrPMoaIZJsdz0cPVnpzeaoJ6-ZQADT6F0-IDH1CLgxMv6cHw-5EBZCBsQ"/>
+</div>
+<div class="flex flex-col justify-between flex-grow py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface">Velouté de Saison</h4>
+<span class="font-price-lg text-price-lg text-secondary">$18.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Seasonal roasted vegetable soup, served with herb-infused crème fraîche and house-made sourdough crisps.</p>
+</div>
+<div class="flex justify-end">
+<button class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar / Action Bar -->
+<div class="fixed bottom-0 w-full flex justify-center pb-8 z-50">
+<div class="bg-primary dark:bg-primary-container shadow-lg fixed bottom-base left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-md rounded-full flex justify-between items-center px-8 py-4 transition-transform hover:scale-[1.02] active:scale-95 duration-150">
+<div class="flex items-center gap-2 text-on-primary dark:text-on-primary-container font-label-md text-label-md">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span>Cart Total: $0.00</span>
+</div>
+<button class="flex items-center gap-2 text-on-primary dark:text-on-primary-container font-label-md text-label-md font-bold">
+<span>View Order</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Navigation Drawer (Side Menu Hidden by default) -->
+<aside class="fixed left-0 top-0 z-[60] h-full w-72 bg-surface dark:bg-surface-container-low shadow-xl -translate-x-full transition-transform duration-300 ease-in-out" id="nav-drawer">
+<div class="p-8">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Menu Categories</h2>
+<nav class="space-y-4">
+<a class="flex items-center gap-4 px-6 py-3 bg-primary-container text-on-primary-container rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-label-md text-label-md">Starters</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">dinner_dining</span>
+<span class="font-label-md text-label-md">Mains</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">icecream</span>
+<span class="font-label-md text-label-md">Desserts</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">local_bar</span>
+<span class="font-label-md text-label-md">Drinks</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Overlay for Drawer -->
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay"></div>
+<script>
+        const menuBtn = document.querySelector('header button:first-child');
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('opacity-0');
+            overlay.classList.toggle('pointer-events-none');
+        }
+
+        menuBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Simple Cart Logic for interaction
+        let cartTotal = 0;
+        const addButtons = document.querySelectorAll('button:has(.material-symbols-outlined:contains("add"))');
+        const cartText = document.querySelector('.bg-primary span:last-child');
+
+        document.querySelectorAll('.material-symbols-outlined').forEach(span => {
+            if(span.textContent === 'add') {
+                span.parentElement.addEventListener('click', (e) => {
+                    // Find the price in the parent card
+                    const card = e.target.closest('.flex-col');
+                    const priceStr = card.querySelector('.text-secondary').textContent;
+                    const price = parseFloat(priceStr.replace('$', ''));
+                    cartTotal += price;
+                    cartText.textContent = `Cart Total: $${cartTotal.toFixed(2)}`;
+                    
+                    // Small pop animation
+                    const cartBar = cartText.closest('.bg-primary');
+                    cartBar.classList.add('scale-105');
+                    setTimeout(() => cartBar.classList.remove('scale-105'), 150);
+                });
+            }
+        });
+    </script>
+</body></html>
